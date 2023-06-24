@@ -7,10 +7,10 @@ está funcionando e se ele de fato existe.*/
  - isso retorna uma resposta com um status 200 ("OK") 
  do HTTP e o texto "Hello World".*/
 
-const http = require('http');
+const http=require('http');
 
-http.createServer((requisiçao, resposta) => {
-    resposta.writeHead(200, {'Content-Type': 'text/plain'});
-    resposta.write('Hello World');
-    resposta.end();
-}).listen(1057);
+http.createServer((req, res)=> {
+    res.writeHead(200,{'Content-Type':'text/plain'})
+res.write('olá, Dev')
+res.end()
+}).listen(1337)
