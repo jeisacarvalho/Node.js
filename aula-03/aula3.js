@@ -1,19 +1,19 @@
-const http = require('http');
-const port1 = 1337;
-const host = '127.0.0.1';
+const http = require('http')
+const porta = 3000
+const host = '127.0.0.1'
 
-const server = http.createServer((req, res)=>{
-   res.writeHead(200,{'content-Type' : 'text/html'});
+const servidor = http.createServer((req,res)=>{
+   res.writeHead(200,{'Content-Type':'text/html'})
    if(req.url=='/'){
-    res.write('Seja bem Vindo!');
-   }else if(req.url=='/canal'){
-    res.write('canal CFB');
-   }if(req.url=='/curso'){
-    res.write('conheca os curso de Node.js');
-   }else if(req.url=='/curso/node'){
-    res.write('curso de node');
+      res.write('Seja bem Vindo')
+   }else if(req.url=='/Canal'){
+      res.write('Canal Jeisa Carvalho')
+   }else if(req.url=='/Curso'){
+      res.write('Conheça nossos cursos')
+   }else if(req.url=='/Curso/Node'){
+      res.write('conheça nosso curso de node')
    }
-   res.end();
-});
+   res.end()
+})
 
-server.listen(port1,host,()=>{console.log('servidor rodando')});
+servidor.listen(porta,host,()=>{console.log('Servidor rodando')})
